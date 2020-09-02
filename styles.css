@@ -21,6 +21,22 @@ red - #ee5253
 
 .header {
   background-color: #0fb9b1;
+  width: 100%;
   position: absolute;
   display: flex;
+  margin: -10px;
+  align-content: center;
+}
+
+.header-text {
+  font-size: 30px;
+  padding-left: 40px;
+}
+
+.nav-button {
+  margin-left: auto;
+  font-size: 16px;
+  margin-right: 40px;
+  margin-top: 22px;
+  height: 40px;
 }
