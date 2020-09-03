@@ -1,10 +1,48 @@
 <html>
+  <div class="bg-img-container">
+    <img class="bg-img" src="./assets/burger-friends.jpg">
+  </div>
   <head>
     <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>What's For Dinner?</title>
   </head>
   <body>
-    
+    <div class="header">
+      <h2 class="header-text">What's For Dinner?</h2>
+      <button class="add-recipe-button">ADD A RECIPE</button>
+    </div>
+    <section>
+      <div class="boxes">
+        <div class="left-box">
+            <h1>What are you looking for?<span class="required"> *</span></h1>
+            <div class="form">
+              <div class="dish-type">
+                <input type="radio">
+                <label>Side Dish</label>
+              </div>
+              <div class="dish-type">
+                <input type="radio">
+                <label>Main Dish</label>
+              </div>
+              <div class="dish-type">
+                <input type="radio">
+                <label>Dessert</label>
+              </div>
+              <div class="dish-type">
+                <input type="radio">
+                <label>Entire Meal</label>
+              </div>
+              <div>
+                <button class="lets-cook-button">LET'S COOK!</button>
+              </div>
+          </div>
+        </div>
+        <div class="right-box">
+          <img class="cookpot" src="./assets/cookpot.svg">
+        </div>
+      </div>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
