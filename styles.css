@@ -34,20 +34,22 @@ red - #ee5253
   padding-left: 40px;
 }
 
-.nav-button {
+.add-recipe-button {
   margin-left: auto;
   font-size: 18px;
   margin-right: 40px;
   margin-top: 22px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 3px;
+  border: 0;
+  border-radius: 5px;
 }
 
-.nav-button:hover {
+.add-recipe-button:hover {
   background-color: #064f4b;
   color: white;
 }
@@ -68,6 +70,12 @@ p {
   font-weight: 400;
 }
 
+label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+}
+
 .boxes {
   display: flex;
   justify-content: space-around;
@@ -78,6 +86,38 @@ p {
   height: 450px;
   width: 600px;
   background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  padding-left: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dish-type {
+  padding-bottom: 10px;
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  width: 200px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  padding: 10px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.lets-cook-button:hover {
+  background-color: #064f4b;
+  color: white;
 }
 
 .right-box {
