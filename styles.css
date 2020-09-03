@@ -67,14 +67,10 @@ h1 {
 h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
+  font-size: 45px;
 }
 
-p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-}
-
-label {
+p, label {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 22px;
@@ -141,4 +137,11 @@ label {
   padding-top: 120px;
   height: 220px;
   width: 220px;
+}
+
+.suggestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 130px;
 }
