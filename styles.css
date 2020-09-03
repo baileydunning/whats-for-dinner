@@ -99,8 +99,12 @@ label {
   justify-content: space-between;
 }
 
+.required {
+  color: red;
+}
+
 .dish-type {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .lets-cook-button {
