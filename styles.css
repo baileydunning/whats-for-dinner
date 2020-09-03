@@ -8,6 +8,10 @@ red - #ee5253
 
 */
 
+.hidden {
+  display: none !important;
+}
+
 .bg-img-container {
   margin: -8px;
   padding: 0;
