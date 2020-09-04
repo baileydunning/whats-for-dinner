@@ -1,12 +1,12 @@
 var sideDishes = ['Coleslaw', 'Garlic Butter Mushrooms', 'Miso Glazed Carrots', 'Garden Salad', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers', 'Mashed Potatoes', 'Hummus']
-var mainDishes = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Dumplings', 'Empanadas', 'Chicken Fried Rice', 'BLT', 'Chili', 'Fish Tacos', 'BBQ Chicken Burgers', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo', 'Pesto Chicken Pizza']
+var mainDishes = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Dumplings', 'Empanadas', 'Chicken Fried Rice', 'Chili', 'Fish Tacos', 'BBQ Chicken Burgers', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo', 'Pesto Chicken Pizza']
 var desserts = ['Apple Pie', 'Black Forest Cake', 'Chocolate Chip Cookies', 'Lemon Bars', 'Red Velvet Cupcakes', 'Oatmeal Raisin Cookies', 'Banana Bread', 'Peach Cobbler']
 
+var select = document.querySelectorAll('.select')
 var cookpot = document.querySelector('.cookpot')
 var suggestionBox = document.querySelector('.suggestion-box')
 var returnDishSuggestion = document.querySelector('.dish-suggestion')
 var letsCookButton = document.querySelector('.lets-cook-button')
-var choice = document.querySelectorAll('.dish-type')
 
 letsCookButton.addEventListener('click', showDish)
 
@@ -20,35 +20,26 @@ function cookingTime() {
   suggestionBox.classList.remove('hidden')
 }
 
+function chooseMealType() {
+  var sideDish = getRandomIndex(sideDishes)
+  var mainDish = getRandomIndex(mainDishes)
+  var dessert = getRandomIndex(desserts)
+  if (select[0].checked === true) {
+    returnDishSuggestion.innerText = `${sideDish}`
+  }
+  if (select[1].checked === true) {
+    returnDishSuggestion.innerText = `${mainDish}`
+  }
+  if (select[2].checked === true) {
+    returnDishSuggestion.innerText = `${dessert}`
+  }
+  if (select[3].checked === true) {
+    returnDishSuggestion.innerText = `${mainDish} with a side of ${sideDish} with ${dessert} for dessert!`
+  }
+}
+
 function showDish() {
   event.preventDefault()
   cookingTime()
   chooseMealType()
-}
-
-function chooseMealType() {
-  if (document.getElementById('sideDish').checked === true) {
-    showSideDish()
-  }
-  if (document.getElementById('mainDish').checked === true) {
-    showMainDish()
-  }
-  if (document.getElementById('dessert').checked === true) {
-    showDessert()
-  }
-}
-
-function showSideDish() {
-  var sideDish = getRandomIndex(sideDishes)
-  returnDishSuggestion.innerText = `${sideDish}`
-}
-
-function showMainDish() {
-  var mainDish = getRandomIndex(mainDishes)
-  returnDishSuggestion.innerText = `${mainDish}`
-}
-
-function showDessert() {
-  var dessert = getRandomIndex(desserts)
-  returnDishSuggestion.innerText = `${dessert}`
 }
