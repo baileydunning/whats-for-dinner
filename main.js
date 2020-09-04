@@ -1,4 +1,4 @@
-var sideDishes = ['Coleslaw', 'Garlic Butter Mushrooms', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers']
+var sideDishes = ['Coleslaw', 'Garlic Butter Mushrooms', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers', 'Mashed Potatoes']
 var mainDishes = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Dumplings', 'Garden Salad', 'BLT', 'Chili', 'Fish Tacos', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo']
 var desserts = ['Apple Pie', 'Black Forest Cake', 'Chocolate Chip Cookies', 'Lemon Bars', 'Red Velvet Cupcakes']
 
@@ -18,9 +18,10 @@ function showDish() {
   event.preventDefault()
   cookpot.classList.add('hidden')
   suggestionBox.classList.remove('hidden')
-  showSideDish()
+  var sideDish = getRandomIndex(sideDishes);
   returnDishSuggestion.innerText = `${sideDish}`
 }
-function showSideDish() {
-  var sideDish = getRandomIndex(sideDishes);
-}
+
+// function showSideDish(sideDishes) {
+//   var sideDish = getRandomIndex(sideDishes);
+// }
