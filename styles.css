@@ -67,7 +67,7 @@ h1 {
 h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 p, label {
@@ -139,7 +139,7 @@ p, label {
   width: 220px;
 }
 
-.suggestion {
+.suggestion-box {
   display: flex;
   flex-direction: column;
   align-items: center;
