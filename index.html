@@ -16,30 +16,40 @@
       <div class="boxes">
         <div class="left-box">
             <h1>What are you looking for?<span class="required"> *</span></h1>
-            <div class="form">
-              <div class="dish-type">
-                <input type="radio">
+            <form>
+              <div>
+                <input type="radio" class="select" name="dish" id="sideDish" value="side-dish">
                 <label>Side Dish</label>
               </div>
-              <div class="dish-type">
-                <input type="radio">
+              <div>
+                <input type="radio" class="select" name="dish" id="mainDish" value="main-dish">
                 <label>Main Dish</label>
               </div>
-              <div class="dish-type">
-                <input type="radio">
+              <div>
+                <input type="radio" class="select" name="dish" id="dessert" value="dessert">
                 <label>Dessert</label>
               </div>
-              <div class="dish-type">
-                <input type="radio">
+              <div>
+                <input type="radio" class="select" name="dish" id="entire-meal" value="entire-meal">
                 <label>Entire Meal</label>
-              </div>
+              </form>
               <div>
                 <button class="lets-cook-button">LET'S COOK!</button>
               </div>
           </div>
         </div>
         <div class="right-box">
-          <img class="cookpot" src="./assets/cookpot.svg">
+          <div>
+            <img class="cookpot" src="./assets/cookpot.svg">
+          </div>
+          <div class="suggestion-box hidden">
+            <div>
+              <center><p><i>You should make:</i></p></center>
+            </div>
+            <div>
+              <h2 class="dish-suggestion">THIS.</h2>
+            </div>
+          </div>
         </div>
       </div>
     </section>
