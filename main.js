@@ -1,6 +1,6 @@
-var sideDishes = ['Coleslaw', 'Garlic Butter Mushrooms', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers', 'Mashed Potatoes', 'Hummus']
-var mainDishes = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Dumplings', 'Garden Salad', 'BLT', 'Chili', 'Fish Tacos', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo']
-var desserts = ['Apple Pie', 'Black Forest Cake', 'Chocolate Chip Cookies', 'Lemon Bars', 'Red Velvet Cupcakes', 'Oatmeal Raisin Cookies']
+var sideDishes = ['Coleslaw', 'Garlic Butter Mushrooms', 'Miso Glazed Carrots', 'Garden Salad', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers', 'Mashed Potatoes', 'Hummus']
+var mainDishes = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Dumplings', 'Empanadas', 'Chicken Fried Rice', 'BLT', 'Chili', 'Fish Tacos', 'BBQ Chicken Burgers', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo', 'Pesto Chicken Pizza']
+var desserts = ['Apple Pie', 'Black Forest Cake', 'Chocolate Chip Cookies', 'Lemon Bars', 'Red Velvet Cupcakes', 'Oatmeal Raisin Cookies', 'Banana Bread', 'Peach Cobbler']
 
 var cookpot = document.querySelector('.cookpot')
 var suggestionBox = document.querySelector('.suggestion-box')
@@ -23,6 +23,10 @@ function cookingTime() {
 function showDish() {
   event.preventDefault()
   cookingTime()
+  chooseMealType()
+}
+
+function chooseMealType() {
   if (document.getElementById('sideDish').checked === true) {
     showSideDish()
   }
