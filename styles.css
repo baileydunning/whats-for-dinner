@@ -8,6 +8,10 @@ red - #ee5253
 
 */
 
+body {
+  margin: 0;
+}
+
 h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -44,7 +48,6 @@ button:hover {
 }
 
 .bg-img-container {
-  margin: -8px;
   padding: 0;
   position: fixed;
   z-index: -1;
@@ -60,8 +63,9 @@ button:hover {
   width: 100%;
   position: absolute;
   display: flex;
-  margin: -10px;
+  align-items: center;
   align-content: center;
+  height: 70px;
 }
 
 .header-text {
@@ -73,20 +77,30 @@ button:hover {
   height: 40px;
   margin-left: auto;
   margin-right: 40px;
-  margin-top: 22px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 3px;
 }
 
 .footer {
-  background-color: #0fb9b1;
+  background-color: #95a5a6;
+  opacity: .9;
   width: 100%;
   position: absolute;
   display: flex;
+  height: 50px;
   align-content: flex-end;
+  align-items: center;
   bottom: 0;
 }
+
+@media(max-width:1045px) {
+  .footer {
+    float: bottom;
+    position: sticky;
+  }
+}
+
 
 .boxes {
   display: flex;
@@ -96,7 +110,7 @@ button:hover {
 
 .left-box {
   margin-top: 150px;
-  height: 450px;
+  height: 400px;
   width: 500px;
   background-color: rgba(225, 225, 225, .9);
   display: flex;
@@ -113,7 +127,7 @@ button:hover {
 }
 
 .required {
-  color: red;
+  color: #ee5253;
 }
 
 .dish-type {
@@ -129,7 +143,7 @@ button:hover {
 
 .right-box {
   margin-top: 150px;
-  height: 450px;
+  height: 400px;
   width: 500px;
   background-color: rgba(225, 225, 225, .9);
 }
@@ -169,4 +183,21 @@ button:hover {
   padding: 10px;
   margin-top: 65px;
   margin-right: 20px;
+}
+
+.add-recipe-form {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  align-items: center;
+}
+
+.custom-recipe {
+  padding-right: 20px;
+}
+
+.add-new-button {
+  background-color: #0fb9b1;
+  width: 100px;
+  padding: 5px;
 }
