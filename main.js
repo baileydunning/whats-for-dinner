@@ -7,8 +7,10 @@ var cookpot = document.querySelector('.cookpot')
 var suggestionBox = document.querySelector('.suggestion-box')
 var returnDishSuggestion = document.querySelector('.dish-suggestion')
 var letsCookButton = document.querySelector('.lets-cook-button')
+var clearButton = document.querySelector('.clear-button')
 
 letsCookButton.addEventListener('click', showDish)
+clearButton.addEventListener('click', clearSuggestion)
 
 function getRandomIndex(array) {
   var randomIndex = Math.floor(Math.random() * array.length)
@@ -18,6 +20,7 @@ function getRandomIndex(array) {
 function cookingTime() {
   cookpot.classList.add('hidden')
   suggestionBox.classList.remove('hidden')
+  clearButton.classList.remove('hidden')
 }
 
 function showDishChoice() {
@@ -42,4 +45,10 @@ function showDish() {
   event.preventDefault()
   cookingTime()
   showDishChoice()
+}
+
+function clearSuggestion() {
+  cookpot.classList.remove('hidden')
+  suggestionBox.classList.add('hidden')
+  clearButton.classList.add('hidden')
 }
