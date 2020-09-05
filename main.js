@@ -74,12 +74,17 @@ function addCustomDish() {
   var type = customRecipeTypeInput.value.trim().toUpperCase()
   if (type === 'SIDE') {
     sideDishes.push(customRecipeInput.value);
-  }
-  if (type === 'MAIN') {
+  } else if (type === 'MAIN') {
     mainDishes.push(customRecipeInput.value);
-  }
-  if (type === 'DESSERT') {
+  } else if (type === 'DESSERT') {
     desserts.push(customRecipeInput.value);
+  } else {
+    alert('Please enter a valid type of "Side", "Main", or "Dessert"')
   }
+  clearUserInputs()
+}
 
+function clearUserInputs() {
+  customRecipeTypeInput.value = ''
+  customRecipeInput.value = ''
 }
