@@ -1,5 +1,5 @@
 var sideDishes = ['Coleslaw', 'Garlic Butter Mushrooms', 'Miso Glazed Carrots', 'Garden Salad', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers', 'Mashed Potatoes', 'Hummus']
-var mainDishes = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Dumplings', 'Empanadas', 'Chicken Fried Rice', 'Chili', 'Fish Tacos', 'BBQ Chicken Burgers', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo', 'Pesto Chicken Pizza']
+var mainDishes = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Meatloaf', 'Dumplings', 'Empanadas', 'Chicken Fried Rice', 'Chili', 'Fish Tacos', 'BBQ Chicken Burgers', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo', 'Pesto Chicken Pizza']
 var desserts = ['Apple Pie', 'Black Forest Cake', 'Chocolate Chip Cookies', 'Lemon Bars', 'Red Velvet Cupcakes', 'Oatmeal Raisin Cookies', 'Banana Bread', 'Peach Cobbler']
 
 var select = document.querySelectorAll('.select')
@@ -20,7 +20,7 @@ function cookingTime() {
   suggestionBox.classList.remove('hidden')
 }
 
-function chooseMealType() {
+function showDishChoice() {
   var sideDish = getRandomIndex(sideDishes)
   var mainDish = getRandomIndex(mainDishes)
   var dessert = getRandomIndex(desserts)
@@ -41,5 +41,5 @@ function chooseMealType() {
 function showDish() {
   event.preventDefault()
   cookingTime()
-  chooseMealType()
+  showDishChoice()
 }
