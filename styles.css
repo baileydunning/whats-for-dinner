@@ -79,6 +79,15 @@ button:hover {
   padding-top: 3px;
 }
 
+.footer {
+  background-color: #0fb9b1;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-content: flex-end;
+  bottom: 0;
+}
+
 .boxes {
   display: flex;
   justify-content: space-around;

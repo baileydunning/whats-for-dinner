@@ -13,7 +13,7 @@ letsCookButton.addEventListener('click', showDish)
 clearButton.addEventListener('click', clearSuggestion)
 
 for (var i = 0; i < selects.length - 1; i++) {
-  selects[i].addEventListener('input', enableCookButton)
+  selects[i].addEventListener('input', enableLetsCookButton)
 }
 
 function getRandomIndex(array) {
@@ -47,8 +47,7 @@ function showDish() {
   }
 }
 
-function enableCookButton() {
-  console.log("hello")
+function enableLetsCookButton() {
   letsCookButton.removeAttribute('disabled')
 }
 
