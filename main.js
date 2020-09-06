@@ -16,13 +16,12 @@ var customRecipeInput = document.querySelector('.custom-dish')
 
 letsCookButton.addEventListener('click', showDish)
 resetButton.addEventListener('click', clearSuggestion)
-// dislikeButton.addEventListener('click', dislikeDish)
+dislikeButton.addEventListener('click', dislikeDish)
 randomizeButton.addEventListener('click', randomizeDish)
 addRecipeButton.addEventListener('click', showFooter)
 addNewButtom.addEventListener('click', addCustomDish)
 
 for (var i = 0; i < selects.length; i++) {
-  console.log('hello')
   selects[i].addEventListener('input', enableLetsCookButton)
 }
 
@@ -75,9 +74,19 @@ function randomizeDish() {
   console.log('hello')
 }
 
-// function dislikeDish() {
-//   clear user inputs / splice returnDishSuggestion from array
-// }
+function dislikeDish() {
+  var dislikedDish = returnDishSuggestion.textContent
+  if (sides.includes(dislikedDish)) {
+    sides.splice(sides.indexOf(dislikedDish), 1)
+  }
+  if (mains.includes(dislikedDish)) {
+    mains.splice(mains.indexOf(dislikedDish), 1)
+  }
+  if (desserts.includes(dislikedDish)) {
+    desserts.splice(desserts.indexOf(dislikedDish), 1)
+  }
+  clearSuggestion()
+}
 
 function showFooter() {
   footer.classList.remove('hidden')
