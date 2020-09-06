@@ -68,6 +68,10 @@ function clearSuggestion() {
   resetButton.classList.add('hidden')
   dislikeButton.classList.add('hidden')
   randomizeButton.classList.add('hidden')
+  selects[0].checked = false
+  selects[1].checked = false
+  selects[2].checked = false
+  selects[3].checked = false
 }
 
 function dislikeDish() {
