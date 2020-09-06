@@ -160,7 +160,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-top: 130px;
+  padding-top: 90px;
 }
 
 .dish-suggestion {

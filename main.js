@@ -1,8 +1,6 @@
-var sideDishes = ['Coleslaw']
+var sideDishes = ['Coleslaw', 'Garlic Butter Mushrooms', 'Miso Glazed Carrots', 'Garden Salad', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers', 'Mashed Potatoes', 'Hummus']
 var mainDishes = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Meatloaf', 'Dumplings', 'Empanadas', 'Chicken Fried Rice', 'Chili', 'Fish Tacos', 'BBQ Chicken Burgers', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo', 'Pesto Chicken Pizza']
 var desserts = ['Apple Pie', 'Black Forest Cake', 'Chocolate Chip Cookies', 'Lemon Bars', 'Red Velvet Cupcakes', 'Oatmeal Raisin Cookies', 'Banana Bread', 'Peach Cobbler']
-
-// 'Garlic Butter Mushrooms', 'Miso Glazed Carrots', 'Garden Salad', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers', 'Mashed Potatoes', 'Hummus'
 
 var selects = document.querySelectorAll('.select')
 var cookpot = document.querySelector('.cookpot')
@@ -21,7 +19,7 @@ clearButton.addEventListener('click', clearSuggestion)
 addRecipeButton.addEventListener('click', showFooter)
 addNewButtom.addEventListener('click', addCustomDish)
 
-for (var i = 0; i < selects.length - 1; i++) {
+for (var i = 0; i < selects.length; i++) {
   selects[i].addEventListener('input', enableLetsCookButton)
 }
 
@@ -72,12 +70,13 @@ function showFooter() {
 
 function addCustomDish() {
   var type = customRecipeTypeInput.value.trim().toUpperCase()
+  var recipe = customRecipeInput.value.charAt(0).toUpperCase() + customRecipeInput.value.slice(1)
   if (type === 'SIDE') {
-    sideDishes.push(customRecipeInput.value);
+    sideDishes.push(recipe);
   } else if (type === 'MAIN') {
-    mainDishes.push(customRecipeInput.value);
+    mainDishes.push(recipe);
   } else if (type === 'DESSERT') {
-    desserts.push(customRecipeInput.value);
+    desserts.push(recipe);
   } else {
     alert('Please enter a valid type of "Side", "Main", or "Dessert"')
   }
@@ -87,4 +86,9 @@ function addCustomDish() {
 function clearUserInputs() {
   customRecipeTypeInput.value = ''
   customRecipeInput.value = ''
+}
+
+function capitalizeUserRecipe() {
+  var recipe = customRecipeInput.value
+  customRecipeInput.value.charAt(0).toUpperCase()
 }
