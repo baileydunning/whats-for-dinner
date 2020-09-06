@@ -17,7 +17,7 @@ var customRecipeInput = document.querySelector('.custom-dish')
 letsCookButton.addEventListener('click', showDish)
 resetButton.addEventListener('click', clearSuggestion)
 dislikeButton.addEventListener('click', dislikeDish)
-randomizeButton.addEventListener('click', randomizeDish)
+randomizeButton.addEventListener('click', showDish)
 addRecipeButton.addEventListener('click', showFooter)
 addNewButtom.addEventListener('click', addCustomDish)
 
@@ -68,10 +68,6 @@ function clearSuggestion() {
   resetButton.classList.add('hidden')
   dislikeButton.classList.add('hidden')
   randomizeButton.classList.add('hidden')
-}
-
-function randomizeDish() {
-  console.log('hello')
 }
 
 function dislikeDish() {
