@@ -1,5 +1,5 @@
-var sideDishes = ['Coleslaw', 'Garlic Butter Mushrooms', 'Miso Glazed Carrots', 'Garden Salad', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers', 'Mashed Potatoes', 'Hummus']
-var mainDishes = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Meatloaf', 'Dumplings', 'Empanadas', 'Chicken Fried Rice', 'Chili', 'Fish Tacos', 'BBQ Chicken Burgers', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo', 'Pesto Chicken Pizza']
+var sides = ['Coleslaw', 'Garlic Butter Mushrooms', 'Miso Glazed Carrots', 'Garden Salad', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers', 'Mashed Potatoes', 'Hummus']
+var mains = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Meatloaf', 'Dumplings', 'Empanadas', 'Chicken Fried Rice', 'Chili', 'Fish Tacos', 'BBQ Chicken Burgers', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo', 'Pesto Chicken Pizza']
 var desserts = ['Apple Pie', 'Black Forest Cake', 'Chocolate Chip Cookies', 'Lemon Bars', 'Red Velvet Cupcakes', 'Oatmeal Raisin Cookies', 'Banana Bread', 'Peach Cobbler']
 
 var selects = document.querySelectorAll('.select')
@@ -37,20 +37,20 @@ function cookingTime() {
 function showDish() {
   event.preventDefault()
   cookingTime()
-  var sideDish = getRandomIndex(sideDishes)
-  var mainDish = getRandomIndex(mainDishes)
+  var side = getRandomIndex(sides)
+  var main = getRandomIndex(mains)
   var dessert = getRandomIndex(desserts)
   if (selects[0].checked === true) {
-    returnDishSuggestion.innerText = `${sideDish}`
+    returnDishSuggestion.innerText = `${side}`
   }
   if (selects[1].checked === true) {
-    returnDishSuggestion.innerText = `${mainDish}`
+    returnDishSuggestion.innerText = `${main}`
   }
   if (selects[2].checked === true) {
     returnDishSuggestion.innerText = `${dessert}`
   }
   if (selects[3].checked === true) {
-    returnDishSuggestion.innerText = `${mainDish} with a side of ${sideDish} with ${dessert} for dessert!`
+    returnDishSuggestion.innerText = `${main} with a side of ${side} with ${dessert} for dessert!`
   }
 }
 
@@ -72,11 +72,11 @@ function addCustomDish() {
   var type = customRecipeTypeInput.value.trim().toUpperCase()
   var recipe = customRecipeInput.value.charAt(0).toUpperCase() + customRecipeInput.value.slice(1)
   if (type === 'SIDE') {
-    sideDishes.push(recipe);
+    sides.push(recipe)
   } else if (type === 'MAIN') {
-    mainDishes.push(recipe);
+    mains.push(recipe)
   } else if (type === 'DESSERT') {
-    desserts.push(recipe);
+    desserts.push(recipe)
   } else {
     alert('Please enter a valid type of "Side", "Main", or "Dessert"')
   }
