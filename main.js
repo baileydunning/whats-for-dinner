@@ -1,7 +1,3 @@
-var sides = ['Coleslaw', 'Garlic Butter Mushrooms', 'Miso Glazed Carrots', 'Garden Salad', 'Spanish Rice', 'Chips & Salsa', 'Cheese & Crackers', 'Mashed Potatoes', 'Hummus']
-var mains = ['Spaghetti & Meatballs', 'Mac & Cheese', 'Meatloaf', 'Dumplings', 'Empanadas', 'Chicken Fried Rice', 'Chili', 'Fish Tacos', 'BBQ Chicken Burgers', 'Thai Yellow Curry', 'Sesame Chicken', 'Turkey Burgers', 'Fettucini Alfredo', 'Pesto Chicken Pizza']
-var desserts = ['Apple Pie', 'Black Forest Cake', 'Chocolate Chip Cookies', 'Lemon Bars', 'Red Velvet Cupcakes', 'Oatmeal Raisin Cookies', 'Banana Bread', 'Peach Cobbler']
-
 var selects = document.querySelectorAll('.select')
 var cookpot = document.querySelector('.cookpot')
 var suggestionBox = document.querySelector('.suggestion-box')
@@ -26,6 +22,7 @@ addRecipeButton.addEventListener('click', showFooter)
 addNewButtom.addEventListener('click', addCustomDish)
 
 for (var i = 0; i < selects.length; i++) {
+  console.log('hello')
   selects[i].addEventListener('input', enableLetsCookButton)
 }
 
@@ -78,10 +75,8 @@ function randomizeDish() {
   console.log('hello')
 }
 
-// function dislikeDish(array) {
-//   for (var i = 0; i > array.length; i++) {
-//     console.log(array[i])
-//   }
+// function dislikeDish() {
+//   clear user inputs / splice returnDishSuggestion from array
 // }
 
 function showFooter() {
@@ -89,14 +84,15 @@ function showFooter() {
 }
 
 function addCustomDish() {
-  var type = customRecipeTypeInput.value.trim().toUpperCase()
   var recipe = customRecipeInput.value.charAt(0).toUpperCase() + customRecipeInput.value.slice(1)
+  var type = customRecipeTypeInput.value.trim().toUpperCase()
+  var customDish = new Dish(recipe, type)
   if (type === 'SIDE') {
-    sides.push(recipe)
+    sides.push(customDish.name)
   } else if (type === 'MAIN') {
-    mains.push(recipe)
+    mains.push(customDish.name)
   } else if (type === 'DESSERT' || 'DESERT') {
-    desserts.push(recipe)
+    desserts.push(customDish.name)
   } else {
     alert('Please enter a valid type of "Side", "Main", or "Dessert"')
   }

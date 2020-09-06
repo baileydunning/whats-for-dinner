@@ -84,7 +84,6 @@ button:hover {
 
 .footer {
   background-color: #95a5a6;
-  opacity: .9;
   width: 100%;
   position: absolute;
   display: flex;
@@ -216,7 +215,7 @@ button:hover {
 }
 
 .add-new-button {
-  background-color: #0fb9b1;
+  background-color: white;
   width: 100px;
   padding: 5px;
 }
