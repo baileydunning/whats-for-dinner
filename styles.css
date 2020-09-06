@@ -170,20 +170,39 @@ button:hover {
   height: 80px;
 }
 
-.clear {
+.reset-dislike-randomize {
   display: flex;
-  justify-content: flex-end;
-  align-content: flex-end;
+  flex-direction: row;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
-.clear-button {
+.reset-button {
   background-color: #95a5a6;
   width: 150px;
   padding: 10px;
   margin-top: 65px;
-  margin-right: 20px;
 }
+
+.dislike-button {
+  font-size: 30px;
+  background: transparent;
+  margin-right: 10px;
+}
+
+
+.randomize-button {
+  font-size: 30px;
+  background: transparent;
+  margin-left: 10px;
+}
+
+.dislike-button:hover,
+.randomize-button:hover {
+  background: white;
+  opacity: .9;
+}
+
 
 .add-recipe-form {
   display: flex;

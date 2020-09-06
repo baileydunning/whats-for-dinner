@@ -6,16 +6,22 @@ var selects = document.querySelectorAll('.select')
 var cookpot = document.querySelector('.cookpot')
 var suggestionBox = document.querySelector('.suggestion-box')
 var returnDishSuggestion = document.querySelector('.dish-suggestion')
+
 var letsCookButton = document.querySelector('.lets-cook-button')
-var clearButton = document.querySelector('.clear-button')
+var resetButton = document.querySelector('.reset-button')
+var dislikeButton = document.querySelector('.dislike-button')
+var randomizeButton = document.querySelector('.randomize-button')
 var addRecipeButton = document.querySelector('.add-recipe-button')
 var addNewButtom = document.querySelector('.add-new-button')
+
 var footer = document.querySelector('.footer')
 var customRecipeTypeInput = document.querySelector('.custom-type')
 var customRecipeInput = document.querySelector('.custom-dish')
 
 letsCookButton.addEventListener('click', showDish)
-clearButton.addEventListener('click', clearSuggestion)
+resetButton.addEventListener('click', clearSuggestion)
+// dislikeButton.addEventListener('click', dislikeDish)
+randomizeButton.addEventListener('click', randomizeDish)
 addRecipeButton.addEventListener('click', showFooter)
 addNewButtom.addEventListener('click', addCustomDish)
 
@@ -31,7 +37,9 @@ function getRandomIndex(array) {
 function cookingTime() {
   cookpot.classList.add('hidden')
   suggestionBox.classList.remove('hidden')
-  clearButton.classList.remove('hidden')
+  resetButton.classList.remove('hidden')
+  dislikeButton.classList.remove('hidden')
+  randomizeButton.classList.remove('hidden')
 }
 
 function showDish() {
@@ -61,8 +69,20 @@ function enableLetsCookButton() {
 function clearSuggestion() {
   cookpot.classList.remove('hidden')
   suggestionBox.classList.add('hidden')
-  clearButton.classList.add('hidden')
+  resetButton.classList.add('hidden')
+  dislikeButton.classList.add('hidden')
+  randomizeButton.classList.add('hidden')
 }
+
+function randomizeDish() {
+  console.log('hello')
+}
+
+// function dislikeDish(array) {
+//   for (var i = 0; i > array.length; i++) {
+//     console.log(array[i])
+//   }
+// }
 
 function showFooter() {
   footer.classList.remove('hidden')
