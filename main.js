@@ -75,7 +75,7 @@ function addCustomDish() {
     sides.push(recipe)
   } else if (type === 'MAIN') {
     mains.push(recipe)
-  } else if (type === 'DESSERT') {
+  } else if (type === 'DESSERT' || 'DESERT') {
     desserts.push(recipe)
   } else {
     alert('Please enter a valid type of "Side", "Main", or "Dessert"')
