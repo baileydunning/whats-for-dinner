@@ -3,7 +3,7 @@ var mains = []
 var desserts = []
 
 class Dish {
-  constructor(name, type, url) {
+  constructor(name, type) {
     this.name = name
     this.type = type
   }

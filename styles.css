@@ -93,7 +93,7 @@ button:hover {
   bottom: 0;
 }
 
-@media(max-width:1045px) {
+@media(max-width:1040px) {
   .footer {
     float: bottom;
     position: sticky;
