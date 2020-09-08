@@ -44,16 +44,16 @@ function showDish() {
   var side = getRandomIndex(sides)
   var main = getRandomIndex(mains)
   var dessert = getRandomIndex(desserts)
-  if (selects[0].checked === true) {
+  if (selects[0].checked) {
     returnDishSuggestion.innerText = `${side}`
   }
-  if (selects[1].checked === true) {
+  if (selects[1].checked) {
     returnDishSuggestion.innerText = `${main}`
   }
-  if (selects[2].checked === true) {
+  if (selects[2].checked) {
     returnDishSuggestion.innerText = `${dessert}`
   }
-  if (selects[3].checked === true) {
+  if (selects[3].checked) {
     returnDishSuggestion.innerText = `${main} with a side of ${side} with ${dessert} for dessert!`
   }
 }
@@ -68,6 +68,14 @@ function clearSuggestion() {
   resetButton.classList.add('hidden')
   dislikeButton.classList.add('hidden')
   randomizeButton.classList.add('hidden')
+  uncheckRadios()
+}
+
+function uncheckRadios() {
+  selects[0].checked = false
+  selects[1].checked = false
+  selects[2].checked = false
+  selects[3].checked = false
 }
 
 function dislikeDish() {
@@ -88,19 +96,24 @@ function showFooter() {
   footer.classList.remove('hidden')
 }
 
+
+
 function addCustomDish() {
   var recipe = customRecipeInput.value.charAt(0).toUpperCase() + customRecipeInput.value.slice(1)
   var type = customRecipeTypeInput.value.trim().toUpperCase()
   var customDish = new Dish(recipe, type)
   if (type === 'SIDE') {
     sides.push(customDish.name)
-  } else if (type === 'MAIN') {
-    mains.push(customDish.name)
-  } else if (type === 'DESSERT' || 'DESERT') {
-    desserts.push(customDish.name)
-  } else {
-    alert('Please enter a valid type of "Side", "Main", or "Dessert"')
   }
+  if (type === 'MAIN') {
+    mains.push(customDish.name)
+  }
+  if (type === 'DESSERT') {
+    desserts.push(customDish.name)
+  }
+  // if (type !== 'SIDE' || 'MAIN' || 'DESSERT') {
+  //   alert('Please enter a valid type of "Side", "Main", or "Dessert"')
+  // }
   clearUserInputs()
 }
 
